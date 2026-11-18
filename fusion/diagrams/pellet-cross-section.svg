@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="760" viewBox="0 0 1000 760" font-family="Verdana, Arial, sans-serif">
+  <rect x="0" y="0" width="1000" height="760" fill="#ffffff"/>
+  <text x="500" y="42" font-size="24" font-weight="bold" fill="#14213d" text-anchor="middle">Fuel Pellet Cross Section (Her Four-Layer Design)</text>
+  <text x="500" y="70" font-size="15" fill="#444444" text-anchor="middle">From Section 3.1 of the design document. Drawn far larger than life.</text>
+
+  <!-- Outer ablative coating -->
+  <circle cx="330" cy="380" r="230" fill="#d9c7a7" stroke="#7c5c1e" stroke-width="3"/>
+  <!-- Timing delay shell -->
+  <circle cx="330" cy="380" r="178" fill="#a8c3e8" stroke="#1d4ed8" stroke-width="3"/>
+  <!-- Optional catalyst layer (dashed, optional) -->
+  <circle cx="330" cy="380" r="122" fill="#e6d6f2" stroke="#6d28d9" stroke-width="3" stroke-dasharray="8 5"/>
+  <!-- Fuel payload -->
+  <circle cx="330" cy="380" r="74" fill="#ffb703" stroke="#c2570b" stroke-width="3"/>
+  <text x="330" y="374" font-size="15" font-weight="bold" fill="#5b2703" text-anchor="middle">D-T FUEL</text>
+  <text x="330" y="396" font-size="15" font-weight="bold" fill="#5b2703" text-anchor="middle">PAYLOAD</text>
+
+  <!-- Leader labels -->
+  <g font-size="15" fill="#14213d">
+    <line x1="492" y1="238" x2="620" y2="170" stroke="#7c5c1e" stroke-width="1.5"/>
+    <text x="625" y="150" font-weight="bold">Outer ablative coating</text>
+    <text x="625" y="171">Heat-resistant polymer or low-Z ceramic,</text>
+    <text x="625" y="190">50 to 100 micrometers thick. Vaporises at</text>
+    <text x="625" y="209">an engineered depth on the way in</text>
+
+    <line x1="452" y1="300" x2="620" y2="290" stroke="#1d4ed8" stroke-width="1.5"/>
+    <text x="625" y="272" font-weight="bold">Timing delay shell</text>
+    <text x="625" y="293">Variable-density material. Its thickness sets</text>
+    <text x="625" y="312">when the fuel is exposed, timed to arrival</text>
+    <text x="625" y="331">at the magnetic axis</text>
+
+    <line x1="404" y1="452" x2="620" y2="412" stroke="#6d28d9" stroke-width="1.5"/>
+    <text x="625" y="394" font-weight="bold">Optional catalyst layer</text>
+    <text x="625" y="415">Trace boron or lithium (her spec).</text>
+    <text x="625" y="436">Claimed to aid reactivity. Basis not</text>
+    <text x="625" y="455">given in her documents, see OPEN-QUESTIONS.md</text>
+
+    <line x1="392" y1="420" x2="620" y2="512" stroke="#c2570b" stroke-width="1.5"/>
+    <text x="625" y="494" font-weight="bold">Dense fuel payload</text>
+    <text x="625" y="515">Deuterium-tritium ice or advanced fuel</text>
+    <text x="625" y="534">mix, released at peak temperature</text>
+    <text x="625" y="553">and pressure</text>
+  </g>
+
+  <rect x="120" y="600" width="760" height="52" fill="#eef2f7" stroke="#7a8699" stroke-width="1.5"/>
+  <text x="500" y="622" font-size="14" fill="#14213d" text-anchor="middle">Stated specs (her design): pellet diameter 1 to 3 mm. Injected at 1 to 5 km/s by magnetic accelerator rails.</text>
+  <text x="500" y="643" font-size="14" fill="#14213d" text-anchor="middle">Timing rule: coating vaporisation time must equal flight time to the magnetic axis.</text>
+
+  <rect x="40" y="672" width="920" height="66" fill="#fdf6e3" stroke="#b58900" stroke-width="2"/>
+  <text x="500" y="698" font-size="14" font-weight="bold" fill="#6b5200" text-anchor="middle">Conceptual framework diagram of the Crockett Reactor, an unproven design by Mary-Victoria Crockett.</text>
+  <text x="500" y="720" font-size="14" fill="#6b5200" text-anchor="middle">Not an engineering blueprint. No prototype has been built.</text>
+</svg>

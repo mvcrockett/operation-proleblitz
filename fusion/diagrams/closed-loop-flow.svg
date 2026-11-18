@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="900" viewBox="0 0 1000 900" font-family="Verdana, Arial, sans-serif">
+  <rect x="0" y="0" width="1000" height="900" fill="#ffffff"/>
+  <text x="500" y="42" font-size="24" font-weight="bold" fill="#14213d" text-anchor="middle">The Closed Loop: How the Reactor Is Meant to Run</text>
+  <text x="500" y="70" font-size="15" fill="#444444" text-anchor="middle">From Section 6 and Schematic 4 of the design document. All steps are her design intent, not demonstrated operation.</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#14213d"/>
+    </marker>
+  </defs>
+
+  <!-- Main chain boxes -->
+  <g font-size="15" fill="#14213d">
+    <rect x="300" y="100" width="400" height="64" fill="#e8ecf3" stroke="#14213d" stroke-width="2"/>
+    <text x="500" y="126" font-weight="bold" text-anchor="middle">1. Pellet fabrication</text>
+    <text x="500" y="148" text-anchor="middle">Layered D-T pellets built from recycled tritium</text>
+    <line x1="500" y1="164" x2="500" y2="192" stroke="#14213d" stroke-width="2.5" marker-end="url(#arr)"/>
+
+    <rect x="300" y="196" width="400" height="64" fill="#e8ecf3" stroke="#14213d" stroke-width="2"/>
+    <text x="500" y="222" font-weight="bold" text-anchor="middle">2. Core injection</text>
+    <text x="500" y="244" text-anchor="middle">Pellets fired at 1 to 5 km/s to the magnetic axis</text>
+    <line x1="500" y1="260" x2="500" y2="288" stroke="#14213d" stroke-width="2.5" marker-end="url(#arr)"/>
+
+    <rect x="300" y="292" width="400" height="64" fill="#ffe1a8" stroke="#c2570b" stroke-width="2"/>
+    <text x="500" y="318" font-weight="bold" text-anchor="middle">3. Inside-out ignition</text>
+    <text x="500" y="340" text-anchor="middle">Coating vaporises at the axis, burn starts at the core</text>
+    <line x1="500" y1="356" x2="500" y2="384" stroke="#14213d" stroke-width="2.5" marker-end="url(#arr)"/>
+
+    <rect x="300" y="388" width="400" height="64" fill="#ffe1a8" stroke="#c2570b" stroke-width="2"/>
+    <text x="500" y="414" font-weight="bold" text-anchor="middle">4. Sustained D-T burn</text>
+    <text x="500" y="436" text-anchor="middle">Each reaction releases a 14.1 MeV neutron</text>
+    <line x1="500" y1="452" x2="500" y2="480" stroke="#14213d" stroke-width="2.5" marker-end="url(#arr)"/>
+
+    <rect x="300" y="484" width="400" height="64" fill="#bfe3dd" stroke="#0f766e" stroke-width="2"/>
+    <text x="500" y="510" font-weight="bold" text-anchor="middle">5. Neutrons cross the vacuum gap</text>
+    <text x="500" y="532" text-anchor="middle">No solid wall in the path (her central claim)</text>
+  </g>
+
+  <!-- Branch arrows -->
+  <line x1="420" y1="548" x2="300" y2="592" stroke="#14213d" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="580" y1="548" x2="700" y2="592" stroke="#14213d" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <g font-size="15" fill="#14213d">
+    <rect x="90" y="596" width="420" height="84" fill="#bfe3dd" stroke="#0f766e" stroke-width="2"/>
+    <text x="300" y="622" font-weight="bold" text-anchor="middle">6A. FLiBe blanket breeds tritium</text>
+    <text x="300" y="644" text-anchor="middle">Lithium-6 plus neutron makes new tritium.</text>
+    <text x="300" y="664" text-anchor="middle">Projected breeding ratio about 2.01 (unverified)</text>
+
+    <rect x="530" y="596" width="420" height="84" fill="#fde2c8" stroke="#c2570b" stroke-width="2"/>
+    <text x="740" y="622" font-weight="bold" text-anchor="middle">6B. FLiBe blanket captures heat</text>
+    <text x="740" y="644" text-anchor="middle">About 80 percent of fusion energy lands</text>
+    <text x="740" y="664" text-anchor="middle">as heat in the salt (established D-T energy split)</text>
+    <line x1="740" y1="680" x2="740" y2="708" stroke="#14213d" stroke-width="2.5" marker-end="url(#arr)"/>
+
+    <rect x="530" y="712" width="420" height="64" fill="#fde2c8" stroke="#c2570b" stroke-width="2"/>
+    <text x="740" y="738" font-weight="bold" text-anchor="middle">7B. Power out</text>
+    <text x="740" y="758" text-anchor="middle">Heat exchanger, sCO2 turbine, grid (projected 186 MWe net)</text>
+  </g>
+
+  <!-- Return loop: tritium extraction back to fabrication -->
+  <line x1="300" y1="680" x2="300" y2="716" stroke="#0f766e" stroke-width="2.5" marker-end="url(#arr)"/>
+  <rect x="90" y="720" width="420" height="56" fill="#e6f4f1" stroke="#0f766e" stroke-width="2"/>
+  <text x="300" y="744" font-size="15" font-weight="bold" fill="#14213d" text-anchor="middle">7A. Tritium extracted (helium sparging)</text>
+  <text x="300" y="764" font-size="14" fill="#14213d" text-anchor="middle">and returned to pellet fabrication</text>
+  <path d="M 90 748 L 40 748 L 40 132 L 292 132" fill="none" stroke="#0f766e" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="30" y="440" font-size="14" fill="#0f766e" transform="rotate(-90 30 440)" text-anchor="middle">LOOP CLOSED (her design claim)</text>
+
+  <rect x="40" y="806" width="920" height="66" fill="#fdf6e3" stroke="#b58900" stroke-width="2"/>
+  <text x="500" y="832" font-size="14" font-weight="bold" fill="#6b5200" text-anchor="middle">Conceptual framework diagram of the Crockett Reactor, an unproven design by Mary-Victoria Crockett.</text>
+  <text x="500" y="854" font-size="14" fill="#6b5200" text-anchor="middle">Not an engineering blueprint. No prototype has been built.</text>
+</svg>

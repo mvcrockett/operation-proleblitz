@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="860" viewBox="0 0 1000 860" font-family="Verdana, Arial, sans-serif">
+  <rect x="0" y="0" width="1000" height="860" fill="#ffffff"/>
+  <text x="500" y="42" font-size="24" font-weight="bold" fill="#14213d" text-anchor="middle">The Crockett Reactor: Four-Layer Nested Architecture</text>
+  <text x="500" y="70" font-size="15" fill="#444444" text-anchor="middle">Cross section, not to scale. Geometry follows the design document's Section 2 text.</text>
+
+  <!-- Outer vacuum chamber -->
+  <circle cx="400" cy="440" r="290" fill="#e8ecf3" stroke="#14213d" stroke-width="5"/>
+  <!-- FLiBe blanket shell -->
+  <circle cx="400" cy="440" r="248" fill="#bfe3dd" stroke="#0f766e" stroke-width="3"/>
+  <!-- Vacuum gap -->
+  <circle cx="400" cy="440" r="185" fill="#f4f6f8" stroke="#7a8699" stroke-width="2" stroke-dasharray="7 5"/>
+  <!-- Levitated HTS bottle ring -->
+  <circle cx="400" cy="440" r="118" fill="#c9d8f2" stroke="#1d4ed8" stroke-width="10"/>
+  <!-- Plasma core -->
+  <circle cx="400" cy="440" r="72" fill="#ffb703" stroke="#c2570b" stroke-width="3"/>
+  <text x="400" y="432" font-size="16" font-weight="bold" fill="#5b2703" text-anchor="middle">PLASMA</text>
+  <text x="400" y="454" font-size="16" font-weight="bold" fill="#5b2703" text-anchor="middle">CORE</text>
+
+  <!-- External HTS magnet array blocks on chamber wall -->
+  <rect x="368" y="128" width="64" height="26" fill="#1d4ed8"/>
+  <rect x="368" y="726" width="64" height="26" fill="#1d4ed8"/>
+  <rect x="88" y="427" width="26" height="64" fill="#1d4ed8"/>
+  <rect x="686" y="427" width="26" height="64" fill="#1d4ed8"/>
+
+  <!-- Pellet injector port and trajectory -->
+  <rect x="52" y="300" width="70" height="30" fill="#8d0801" />
+  <text x="87" y="290" font-size="13" font-weight="bold" fill="#8d0801" text-anchor="middle">PELLET INJECTOR</text>
+  <line x1="122" y1="315" x2="392" y2="428" stroke="#8d0801" stroke-width="3" stroke-dasharray="9 6"/>
+  <circle cx="250" cy="368" r="6" fill="#8d0801"/>
+
+  <!-- Neutron arrows outward -->
+  <g stroke="#c2570b" stroke-width="3">
+    <line x1="452" y1="392" x2="540" y2="330"/>
+    <line x1="452" y1="488" x2="540" y2="550"/>
+    <line x1="348" y1="392" x2="262" y2="330"/>
+  </g>
+  <g fill="#c2570b">
+    <polygon points="540,330 524,332 534,346"/>
+    <polygon points="540,550 524,548 534,534"/>
+    <polygon points="262,330 278,332 268,346"/>
+  </g>
+  <text x="560" y="322" font-size="13" fill="#8a3c06">neutrons (14.1 MeV)</text>
+
+  <!-- Leader labels, right side -->
+  <g font-size="15" fill="#14213d">
+    <line x1="640" y1="215" x2="760" y2="180" stroke="#14213d" stroke-width="1.5"/>
+    <text x="765" y="172" font-weight="bold">1. Outer vacuum chamber</text>
+    <text x="765" y="193">Stainless or low-activation alloy,</text>
+    <text x="765" y="212">about 3 to 5 m across (projected)</text>
+
+    <line x1="612" y1="300" x2="760" y2="262" stroke="#0f766e" stroke-width="1.5"/>
+    <text x="765" y="254" font-weight="bold">2. FLiBe liquid blanket</text>
+    <text x="765" y="275">Molten salt shell, 20 to 40 cm thick,</text>
+    <text x="765" y="294">500 to 700 deg C. Captures heat,</text>
+    <text x="765" y="313">breeds tritium from lithium</text>
+
+    <line x1="540" y1="540" x2="760" y2="352" stroke="#7a8699" stroke-width="1.5"/>
+    <text x="765" y="344" font-weight="bold">3. Vacuum gap, 0.5 to 1 m</text>
+    <text x="765" y="365">Empty space between blanket and</text>
+    <text x="765" y="384">bottle. Neutrons cross it to the blanket</text>
+
+    <line x1="492" y1="512" x2="760" y2="430" stroke="#1d4ed8" stroke-width="1.5"/>
+    <text x="765" y="422" font-weight="bold">4. Levitated magnetic bottle</text>
+    <text x="765" y="443">HTS dipole ring, floating with no</text>
+    <text x="765" y="462">solid supports, held by the external</text>
+    <text x="765" y="481">HTS magnet array (blue blocks)</text>
+
+    <line x1="400" y1="512" x2="760" y2="520" stroke="#c2570b" stroke-width="1.5"/>
+    <text x="765" y="512" font-weight="bold">5. Plasma core</text>
+    <text x="765" y="533">D-T fuel burns at tens of millions</text>
+    <text x="765" y="552">of degrees (her design target)</text>
+  </g>
+
+  <g font-size="13" fill="#555555">
+    <text x="60" y="640">Dashed red line: pellet trajectory from the chamber wall to the core (her design).</text>
+    <text x="60" y="662">Uncertain in source: the blanket is described as a spherical shell inside a chamber</text>
+    <text x="60" y="682">described as a cylinder, and the dimension stack is not closed in her documents.</text>
+    <text x="60" y="704">Open question: the levitated bottle itself sits in the neutron path. See OPEN-QUESTIONS.md.</text>
+  </g>
+
+  <rect x="40" y="742" width="920" height="88" fill="#fdf6e3" stroke="#b58900" stroke-width="2"/>
+  <text x="500" y="772" font-size="14" font-weight="bold" fill="#6b5200" text-anchor="middle">Conceptual framework diagram of the Crockett Reactor, an unproven design by Mary-Victoria Crockett.</text>
+  <text x="500" y="796" font-size="14" fill="#6b5200" text-anchor="middle">Not an engineering blueprint. No prototype has been built.</text>
+</svg>
