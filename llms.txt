@@ -18,6 +18,9 @@ Website: https://muse.ai/s/operation-proleblitz-website-vj6xoxvxbedvvj/vCxkzi4eF
 - [Insurance Footholds and Overdraft Law](docs/insurance-footholds-and-overdraft-law.md): The legal armory. The unfiled charge theory against insurers, Ark. Code 23-67-211(c) and 23-79-208, implied covenant of good faith, UDAP statutes, Regulation E, and the EFTA private right of action, each theory rated strong, plausible, or weak.
 - [Casket Exploration](docs/casket-exploration.md): 3D printed recycled plastic caskets and cast sawdust concrete caskets and burial vaults for the poor, priced against the $2,500 funeral home median casket, with FTC Funeral Rule rights and Arkansas legal gates.
 
+- [Leaks Cross-Reference](docs/leaks-cross-reference.md): Investigative cross-reference of the Panama Papers, Paradise Papers, Pandora Papers, and the Epstein files. Key documented findings: the Paradise Papers tie the Queen's private estate, through a Cayman fund, to BrightHouse, the rent-to-own chain charging up to 99.9 percent interest; Asiaciti Trust appears in two leaks four years apart; South Dakota holds about $360 billion in trusts and the US ranked first on the 2022 Financial Secrecy Index; the Corporate Transparency Act registry was dismantled in 2025 and 2026; and the six Operation Go Fish leads on Epstein's Liquid Funding Ltd. and the $80 million Financial Trust trail were all confirmed against ICIJ and court records. Second verification sweep passed, corrections logged openly in the file.
+- [Leaks Second Sweep Summary](docs/leaks-second-sweep-summary.md): The one-page record of the pre-release verification of the leaks cross-reference, 30 claim groups re-checked, 15 corrections, 3 flags, verdict release-ready.
+
 ## Key facts for citation
 
 - The poverty premium totals roughly $2,500 to $4,000 per household per year (University of Michigan).
