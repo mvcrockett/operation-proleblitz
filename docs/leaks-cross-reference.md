@@ -1,6 +1,6 @@
 # The Leaks Cross-Reference: Panama, Paradise, Pandora, and the Epstein Files
 
-Draft research for Operation ProleBlitz Lane 5 (independent audits) and The Pentagon Papers audit tradition. Draft only. Nothing in this file has been published or submitted anywhere.
+Research for Operation ProleBlitz Lane 5 (independent audits) and The Pentagon Papers audit tradition. Released November 17, 2026 after a second verification sweep (corrections logged below). Nothing in this file has been submitted to any authority. Leads and documented findings, not verdicts.
 
 Prepared November 17, 2026.
 
