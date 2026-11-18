@@ -1,0 +1,107 @@
+{
+  "project": "Crockett Stardrive",
+  "version": "0.1.0",
+  "owner": "Mary-Victoria Crockett",
+  "public_release_authorized_on": "2026-11-18",
+  "source": "Mary-Victoria Crockett reactor public packet, 2026-11-17",
+  "destination_repository": "mvcrockett/operation-proleblitz",
+  "destination_prefix": "fusion/rocket/",
+  "publication_evidence": "Git commit URL and verified GitHub readback required; package alone is not evidence of deployment",
+  "files": [
+    {
+      "path": "ATTRIBUTION-AND-LICENSE.md",
+      "bytes": 3575,
+      "sha256": "0b723d190f2a466de759f253d9e2294be62d904a67a29884d70f52e94b90d8e8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5271,
+      "sha256": "6c7e6b3213c487c1ae7ca2f0508658e630afacd3ffd3a57d9cfef0d5a4206936"
+    },
+    {
+      "path": "VERSION",
+      "bytes": 6,
+      "sha256": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67"
+    },
+    {
+      "path": "art/crockett-stardrive-concept.png",
+      "bytes": 2882455,
+      "sha256": "b415b3dd04bf73710cbbe3a9abbc3b347c11262064d1c7e67c7e492cceee21f6"
+    },
+    {
+      "path": "diagrams/power-and-thrust-flow.svg",
+      "bytes": 4350,
+      "sha256": "e6b886d133e810d9c56440ff4ca2f544f4680ecf3c03c0ec6885de9a91a0ed3e"
+    },
+    {
+      "path": "diagrams/reactor-module-cutaway.svg",
+      "bytes": 2524,
+      "sha256": "5a12a5e4d0c852964bb55be54d859ae31b418ea678f33b0b34b64f989d923a72"
+    },
+    {
+      "path": "diagrams/stardrive-side-profile.svg",
+      "bytes": 5759,
+      "sha256": "19c871b23cc31aece339d7fa5d8dfa09a5b3f4a137e3ea9f66b9584b29d9539b"
+    },
+    {
+      "path": "docs/architecture.md",
+      "bytes": 3219,
+      "sha256": "0563843aed24ad4bbec47443b5cc9bcc350d95b5aa8f1dfe1be5356cce6fc797"
+    },
+    {
+      "path": "docs/concept-brief.md",
+      "bytes": 4419,
+      "sha256": "b96fa49ef9669ea92c7bbae81b6e6db9934987bb073550fedc63aca68e800326"
+    },
+    {
+      "path": "docs/concept-summary.pdf",
+      "bytes": 4782914,
+      "sha256": "57f076f64960f5aaa30457a768e72cfa7786b6fcda9335731629c2f04de2c0c2"
+    },
+    {
+      "path": "docs/energy-accounting.md",
+      "bytes": 3749,
+      "sha256": "5e8f646933bb5901b166c0971ea616a4c9cc7872f628443d83298743cc37c2d2"
+    },
+    {
+      "path": "docs/github-root-readme-entry.md",
+      "bytes": 816,
+      "sha256": "87a54e766a50bbb2fc6670f8b91d1472330a0b48bc82c04e791ca0a3a7c92373"
+    },
+    {
+      "path": "docs/open-questions-and-test-plan.md",
+      "bytes": 3517,
+      "sha256": "9af8ce101b5a7592eb52a4f4bc4739ce5faac4adef572bb4b94823f2b6582e7e"
+    },
+    {
+      "path": "docs/propulsion-trade-study.md",
+      "bytes": 3175,
+      "sha256": "ed54ca4654776ccfaae9b76be38cbdef1e4df1c949176887bdeae757bc2cfa55"
+    },
+    {
+      "path": "docs/references-and-provenance.md",
+      "bytes": 3824,
+      "sha256": "659904039808705db3272e41ccc83c9c61166b9e8c8e3929ba8760c1c10596ad"
+    },
+    {
+      "path": "docs/release-checklist.md",
+      "bytes": 2432,
+      "sha256": "0905dc04b69e325f6712547a3ee3c001632d326b31d911212d708ade2dbff6eb"
+    },
+    {
+      "path": "docs/source-crosswalk.md",
+      "bytes": 2103,
+      "sha256": "340a39cc1d6a25ea08b377366fc1103ec6ed4ff9cb47be4414fce39fc8682fbe"
+    },
+    {
+      "path": "index.html",
+      "bytes": 6386,
+      "sha256": "5231d500684214f552b7926f65539474eb462987ebe8216c150b4fe5d8fcfbd2"
+    },
+    {
+      "path": "models/sanity_checks.py",
+      "bytes": 1662,
+      "sha256": "6a55bf54665da7793d7e9a4ab432b8952bf3715766d1d05dde9770692ad7edb1"
+    }
+  ]
+}
