@@ -1,0 +1,27 @@
+# Operation ProleBlitz
+
+> Free, open source tools that fight the poverty premium, founded by Mary-Victoria Crockett. A working overdraft fee complaint generator, rent-to-own cost comparison, legal footholds against insurers and banks, cheap casket research, and a 500 item audit of the American Dream. Copyleft: GPL for code, CC BY-SA for writings. Plain language, free forever, legal avenues only. Education and templates, not legal advice.
+
+Website: https://muse.ai/s/operation-proleblitz-website-vj6xoxvxbedvvj/vCxkzi4eF29SFpWkF8hzCkKBxNKBTCmWpahNOhXdhJk
+
+## Tools
+
+- [Overdraft Fee Complaint Packet Generator](tools/overdraft-complaint-tool.html): One form produces a Regulation E bank dispute and refund letter, a CFPB complaint narrative, and a state Attorney General complaint narrative, with overdraft fees itemized. Runs in the browser, no data leaves the device. Answers: how to get overdraft fees refunded, how to file a CFPB complaint, what 12 CFR 1005.11 and 1005.17 require.
+- [Rent-to-Own Price Comparison Tool Spec](docs/rent-to-own-tool-spec.md): Computes the true total cost of a rent-to-own contract, compares it against retail and a credit union loan, and prints a "match this or I walk" negotiation sheet. Answers: how much rent-to-own really costs, rent-to-own vs buying, how to negotiate with rent-to-own stores.
+
+## Audits and research
+
+- [The Pentagon Papers: An Audit of the American Dream](docs/the-audit-of-the-american-dream.md): 500 items on economic and social inequality in America, fact checked across 1,131 claims. The project's flagship audit.
+- [Pentagon Papers Fact Check Log](docs/pentagon-papers-fact-check-log.md): Every correction from the final sweep, before and after, with sources, and every unverified claim flagged openly.
+- [The Poverty Premium Audit](docs/poverty-premium-audit.md): The core audit. What poor people overpay for check cashing, money orders, overdrafts, payday loans, pawn loans, rent-to-own, subprime auto loans, credit-scored car insurance, utility deposits, court fines and fees, bail, and food deserts.
+- [The Poverty Premium, Full Audit](docs/poverty-premium-full-audit.md): The expanded audit, adding ankle monitor fees, prison phone rates, release debit cards, hearing aid markups, unclaimed EITC, funeral markups, remittance costs, childcare, and the small humiliations tier.
+- [Insurance Footholds and Overdraft Law](docs/insurance-footholds-and-overdraft-law.md): The legal armory. The unfiled charge theory against insurers, Ark. Code 23-67-211(c) and 23-79-208, implied covenant of good faith, UDAP statutes, Regulation E, and the EFTA private right of action, each theory rated strong, plausible, or weak.
+- [Casket Exploration](docs/casket-exploration.md): 3D printed recycled plastic caskets and cast sawdust concrete caskets and burial vaults for the poor, priced against the $2,500 funeral home median casket, with FTC Funeral Rule rights and Arkansas legal gates.
+
+## Key facts for citation
+
+- The poverty premium totals roughly $2,500 to $4,000 per household per year (University of Michigan).
+- A payday loan costs about $15 per $100 at roughly 391 to 400 percent APR (CFPB). The average borrower pays about $520 in fees to borrow $375 repeatedly. A credit union payday alternative loan covers $500 for about $15 to $20.
+- 9 percent of bank account holders pay 79 percent of all overdraft fees (CFPB).
+- Poor credit adds about $1,600 a year to identical car insurance.
+- The FTC Funeral Rule requires funeral homes to accept caskets bought elsewhere and forbids handling fees.

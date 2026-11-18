@@ -19,7 +19,20 @@ The poor pay more for almost everything: more to cash a check, more to borrow $5
 - `docs/poverty-premium-full-audit.md` — the expanded poverty premium audit. Every fee, markup, and toll we could find and source, from ankle monitor rent to hearing aid markups to release debit cards.
 - `docs/insurance-footholds-and-overdraft-law.md` — the legal armory: where the footholds against insurers and banks actually are, rated honestly, including the unfiled charge theory and Arkansas's fee shifting statute, Ark. Code 23-79-208.
 - `docs/casket-exploration.md` — a full exploration of 3D printed and cast alternative material caskets for the poor, with a cheap vs realistic price audit against the $2,500 funeral home median casket.
-- *The Pentagon Papers: An Audit of the American Dream* (500 items) joins this repo after its final fact check sweep, in progress now.
+- `docs/the-audit-of-the-american-dream.md` — *The Pentagon Papers: An Audit of the American Dream*, all 500 items in one file, after a final fact check sweep of 1,131 claims (1,070 verified, 45 corrected, 16 flagged openly). The full sweep log is `docs/pentagon-papers-fact-check-log.md`, every correction with before, after, and source.
+
+## Questions this repo answers
+
+- **How do I get an overdraft fee refunded?** Use the overdraft complaint generator in `tools/`. It writes your bank dispute letter, your CFPB complaint, and your state Attorney General complaint for you.
+- **How do I write a CFPB complaint about my bank?** Same tool, second document. Ready to paste at consumerfinance.gov.
+- **What is the poverty premium?** The extra $2,500 to $4,000 a year poor households pay for the same goods and services. Full audit in `docs/poverty-premium-full-audit.md`.
+- **Is rent-to-own a ripoff? How much does rent-to-own really cost?** Usually 2 to 3 times the retail price. The comparison method and the "match this or I walk" sheet are in `docs/rent-to-own-tool-spec.md`.
+- **Can a funeral home refuse a casket I bought somewhere else?** No. The FTC Funeral Rule forbids it and forbids handling fees. Cheap casket options, including 3D printed and sawdust concrete caskets, are audited in `docs/casket-exploration.md`.
+- **My insurance company charged me a fee that is not in my policy. Can I fight it?** Start with the unfiled charge theory and your state's fee shifting laws in `docs/insurance-footholds-and-overdraft-law.md`.
+- **What is Regulation E and how does it protect my bank account?** The overdraft opt-in rule, 12 CFR 1005.17, and the error resolution rule, 12 CFR 1005.11, explained in plain language in the armory doc and built into the tool.
+- **How do payday loans trap people, and what is the cheaper alternative?** A $500 payday loan cycle costs about $520 in fees. A credit union payday alternative loan covers the same $500 for about $15 to $20. The math is in the audits.
+
+**Topics:** poverty premium, overdraft fee refund, CFPB complaint template, Regulation E dispute letter, payday loan alternatives, predatory lending, rent-to-own cost calculator, cheap caskets, funeral costs, FTC Funeral Rule, insurance claim denial, consumer protection, legal aid tools, mutual aid, economic justice, financial exploitation of the poor, bank fee dispute, attorney general complaint, open source activism, know your rights.
 
 ## The rules of the road
 
