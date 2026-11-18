@@ -9,6 +9,10 @@ Website: https://muse.ai/s/operation-proleblitz-website-vj6xoxvxbedvvj/vCxkzi4eF
 - [Overdraft Fee Complaint Packet Generator](tools/overdraft-complaint-tool.html): One form produces a Regulation E bank dispute and refund letter, a CFPB complaint narrative, and a state Attorney General complaint narrative, with overdraft fees itemized. Runs in the browser, no data leaves the device. Answers: how to get overdraft fees refunded, how to file a CFPB complaint, what 12 CFR 1005.11 and 1005.17 require.
 - [Rent-to-Own Price Comparison Tool Spec](docs/rent-to-own-tool-spec.md): Computes the true total cost of a rent-to-own contract, compares it against retail and a credit union loan, and prints a "match this or I walk" negotiation sheet. Answers: how much rent-to-own really costs, rent-to-own vs buying, how to negotiate with rent-to-own stores.
 
+## Housing
+
+- [Operation 20k Tiny House](housing/operation-20k-tiny-house.md): Complete open source build instructions for the KumikoCast tiny house on wheels. Small interlocking 3D printed blocks (Kumiko Cube hubs, beams, arc beams, lattice panels) form an arched frame on a wooden base and converted utility trailer, draped with concrete cloth that hardens into a shell, with peel-and-stick solar over the arch. 8 by 16 by 8.5 feet, 128 square feet, about $15,400 cheap and $21,800 realistic for the house build. Blocks can be printed from recycled plastic with the Project Free Bin recycler. Design concept and research plan, not a code-approved building system; the named first test is printing one complete arch rib and weighing it. Answers: how to build a tiny house for $20,000, 3D printed tiny house instructions, concrete cloth house, KumikoCast.
+
 ## Audits and research
 
 - [The Pentagon Papers: An Audit of the American Dream](docs/the-audit-of-the-american-dream.md): 500 items on economic and social inequality in America, fact checked across 1,131 claims. The project's flagship audit.
