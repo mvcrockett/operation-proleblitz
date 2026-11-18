@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overdraft Fee Complaint Packet Generator</title>
+<style>
+  :root {
+    --ink: #111111;
+    --paper: #ffffff;
+    --accent: #0b5394;
+    --accent-dark: #073763;
+    --soft: #eef3f8;
+    --border: #444444;
+    --good: #1e6b1e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    background: var(--paper);
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 20px 16px 60px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 8px 0 6px; }
+  h2 { font-size: 24px; margin: 34px 0 8px; border-bottom: 3px solid var(--accent); padding-bottom: 4px; }
+  h3 { font-size: 21px; margin: 0 0 6px; }
+  p { margin: 8px 0; }
+  .free-note {
+    background: var(--soft);
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 18px;
+  }
+  label { display: block; font-weight: bold; margin: 18px 0 4px; }
+  .hint { font-weight: normal; font-size: 16px; color: #333333; margin: 2px 0 0; }
+  input[type="text"], input[type="date"], input[type="number"], textarea, select {
+    width: 100%;
+    font-size: 19px;
+    font-family: inherit;
+    padding: 10px;
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    background: #ffffff;
+    color: var(--ink);
+  }
+  textarea { min-height: 110px; }
+  fieldset { border: 2px solid var(--border); border-radius: 8px; margin: 20px 0 0; padding: 10px 14px 14px; }
+  legend { font-weight: bold; padding: 0 6px; }
+  .radio-row { display: block; font-weight: normal; margin: 8px 0; }
+  .radio-row input { width: auto; margin-right: 8px; transform: scale(1.3); }
+  .fee-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    margin: 12px 0;
+    background: #fafafa;
+  }
+  @media (min-width: 620px) {
+    .fee-row { grid-template-columns: 150px 110px 1fr auto; align-items: end; }
+  }
+  .fee-row label { margin: 0 0 2px; font-size: 16px; }
+  button {
+    font-family: inherit;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid var(--accent-dark);
+    padding: 12px 18px;
+    background: var(--accent);
+    color: #ffffff;
+  }
+  button.secondary { background: #ffffff; color: var(--accent-dark); }
+  button.small { font-size: 16px; padding: 8px 12px; }
+  button.remove { background: #ffffff; color: #8b0000; border-color: #8b0000; }
+  button:focus, input:focus, textarea:focus, select:focus { outline: 3px solid #f1c40f; outline-offset: 1px; }
+  #totals {
+    background: var(--soft);
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 21px;
+    font-weight: bold;
+    margin-top: 16px;
+  }
+  .output-box {
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 14px;
+    margin: 18px 0;
+    background: #ffffff;
+  }
+  .output-text {
+    white-space: pre-wrap;
+    background: #fdfdf5;
+    border: 1px solid #999999;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 17px;
+    min-height: 60px;
+  }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0; }
+  .where { background: var(--soft); border-radius: 6px; padding: 10px 12px; font-size: 17px; }
+  .copied { color: var(--good); font-weight: bold; font-size: 16px; min-height: 20px; }
+  #generate-btn { width: 100%; font-size: 22px; padding: 16px; margin-top: 22px; }
+  .privacy { font-size: 16px; color: #333333; }
+  @media print {
+    body.print-a .no-print, body.print-a .output-box:not(#box-a),
+    body.print-b .no-print, body.print-b .output-box:not(#box-b),
+    body.print-c .no-print, body.print-c .output-box:not(#box-c) { display: none !important; }
+    .btn-row, .copied, .where { display: none !important; }
+    .output-text { border: none; background: #ffffff; font-size: 12pt; }
+    .output-box { border: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="no-print">
+    <h1>Overdraft Fee Complaint Packet Generator</h1>
+    <div class="free-note">
+      <strong>This tool is free, and it always will be.</strong> It helps you write complaint letters about overdraft fees. It is not legal advice, and the people who made it are not lawyers. It just puts your story into the shapes that banks and government offices expect. Nothing you type here leaves your phone or computer. There is no account, no upload, and no tracking.
+    </div>
+
+    <h2>Step 1. Tell us what happened</h2>
+
+    <label for="bank-name">Bank or credit union name</label>
+    <input type="text" id="bank-name" autocomplete="organization" placeholder="Example: First Bank of Example">
+
+    <label for="holder-name">Your full name, the way it appears on the account</label>
+    <input type="text" id="holder-name" autocomplete="name" placeholder="Example: Jordan Smith">
+
+    <label for="acct-last4">Last 4 digits of the account number</label>
+    <p class="hint">Optional. Never type the full account number anywhere in this tool.</p>
+    <input type="text" id="acct-last4" maxlength="4" inputmode="numeric" placeholder="Example: 4821">
+
+    <label for="holder-address">Your mailing address</label>
+    <p class="hint">Optional. It is used in the bank letter and the Attorney General complaint.</p>
+    <input type="text" id="holder-address" autocomplete="street-address" placeholder="Example: 123 Main St, Apt 4, Springfield">
+
+    <label for="holder-city">Your city, state, and ZIP</label>
+    <p class="hint">Optional.</p>
+    <input type="text" id="holder-city" placeholder="Example: Springfield, ST 00000">
+
+    <fieldset>
+      <legend>The overdraft fees</legend>
+      <p class="hint">Add one row for each fee. Look at your statement or your banking app to find them. The total adds itself up as you go.</p>
+      <div id="fee-list"></div>
+      <button type="button" class="secondary" id="add-fee-btn">+ Add another fee</button>
+      <div id="totals">Total fees: $0.00 across 0 fees</div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Did you agree to overdraft coverage?</legend>
+      <p class="hint">Banks are not allowed to charge overdraft fees on debit card and ATM purchases unless you said yes to overdraft coverage first. This is a federal rule, and it matters a lot. Pick the answer that fits you best.</p>
+      <label class="radio-row"><input type="radio" name="optin" value="no"> No, I never agreed to it</label>
+      <label class="radio-row"><input type="radio" name="optin" value="unsure" checked> I do not remember agreeing to it</label>
+      <label class="radio-row"><input type="radio" name="optin" value="yes"> Yes, I agreed to it at some point</label>
+    </fieldset>
+
+    <label for="story">What happened, in your own words</label>
+    <p class="hint">Two or three sentences is plenty. Example: my paycheck posted a day late and the bank charged me three fees on small purchases while my account showed a positive balance in the app.</p>
+    <textarea id="story" placeholder="Tell it plain, the way you would tell a friend."></textarea>
+
+    <button type="button" id="generate-btn">Build my complaint packet</button>
+    <p class="privacy">Your packet appears below. You will get three documents. Send all three. Each one goes to a different office, and the pressure adds up.</p>
+  </div>
+
+  <div id="outputs" hidden>
+    <h2 class="no-print">Step 2. Your complaint packet</h2>
+
+    <div class="output-box" id="box-a">
+      <h3 class="no-print">A. Dispute and refund letter to your bank</h3>
+      <div class="btn-row">
+        <button type="button" class="small" data-copy="out-a">Copy this letter</button>
+        <button type="button" class="small secondary" data-print="print-a">Print view</button>
+        <span class="copied" id="copied-a"></span>
+      </div>
+      <div class="output-text" id="out-a"></div>
+      <p class="where"><strong>Where to file it:</strong> Send this to your bank first. You can hand it in at a branch, send it through the secure message center in your banking app, or mail it to the address on your statement. Keep a copy and write down the date you sent it. Under Regulation E, once a bank gets an error notice it generally has 10 business days to investigate or put the money back while it looks into things. If the bank says no, the two complaints below are your next step, and having this letter proves you asked.</p>
+    </div>
+
+    <div class="output-box" id="box-b">
+      <h3 class="no-print">B. Complaint to the Consumer Financial Protection Bureau</h3>
+      <div class="btn-row">
+        <button type="button" class="small" data-copy="out-b">Copy this complaint</button>
+        <button type="button" class="small secondary" data-print="print-b">Print view</button>
+        <span class="copied" id="copied-b"></span>
+      </div>
+      <div class="output-text" id="out-b"></div>
+      <p class="where"><strong>Where to file it:</strong> Go to consumerfinance.gov and choose File a complaint, or call 1-855-411-2372. Paste the text above into the box that asks what happened. The Bureau sends your complaint to the bank, and the bank has to answer, usually within 15 days. Banks take these seriously because every answer is read by a regulator.</p>
+    </div>
+
+    <div class="output-box" id="box-c">
+      <h3 class="no-print">C. Complaint to your state Attorney General</h3>
+      <div class="btn-row">
+        <button type="button" class="small" data-copy="out-c">Copy this complaint</button>
+        <button type="button" class="small secondary" data-print="print-c">Print view</button>
+        <span class="copied" id="copied-c"></span>
+      </div>
+      <div class="output-text" id="out-c"></div>
+      <p class="where"><strong>Where to file it:</strong> Search for your state Attorney General consumer complaint page, or call their consumer protection hotline and ask where to send it. Most states take complaints online and by mail. The Attorney General may not take your case one by one, but your complaint goes into the pattern file. When enough people complain about the same bank, that file is what investigations are built on.</p>
+    </div>
+
+    <p class="privacy no-print">One more thing worth knowing. If your bank is a national bank and it will not budge, you can also complain to the Office of the Comptroller of the Currency. If it is a credit union, the National Credit Union Administration takes complaints. You do not have to pick just one office. Filing in more than one place is allowed, and it is often how people finally get their money back.</p>
+  </div>
+</main>
+
+<script>
+(function () {
+  var feeList = document.getElementById("fee-list");
+  var totalsEl = document.getElementById("totals");
+
+  function money(n) {
+    return "$" + n.toFixed(2);
+  }
+
+  function makeFeeRow() {
+    var row = document.createElement("div");
+    row.className = "fee-row";
+    row.innerHTML =
+      '<div><label>Date of the fee</label><input type="date" class="fee-date"></div>' +
+      '<div><label>Amount</label><input type="number" class="fee-amount" min="0" step="0.01" placeholder="35.00"></div>' +
+      '<div><label>What triggered it</label><input type="text" class="fee-trigger" placeholder="Example: $6 coffee purchase"></div>' +
+      '<div><button type="button" class="remove small">Remove</button></div>';
+    row.querySelector(".remove").addEventListener("click", function () {
+      row.remove();
+      updateTotals();
+    });
+    row.querySelector(".fee-amount").addEventListener("input", updateTotals);
+    feeList.appendChild(row);
+  }
+
+  function getFees() {
+    var fees = [];
+    var rows = feeList.querySelectorAll(".fee-row");
+    for (var i = 0; i < rows.length; i++) {
+      var amt = parseFloat(rows[i].querySelector(".fee-amount").value);
+      if (!isNaN(amt) && amt > 0) {
+        fees.push({
+          date: rows[i].querySelector(".fee-date").value || "[DATE]",
+          amount: amt,
+          trigger: rows[i].querySelector(".fee-trigger").value.trim() || "[PURCHASE OR PAYMENT]"
+        });
+      }
+    }
+    return fees;
+  }
+
+  function totalOf(fees) {
+    var t = 0;
+    for (var i = 0; i < fees.length; i++) { t += fees[i].amount; }
+    return t;
+  }
+
+  function updateTotals() {
+    var fees = getFees();
+    totalsEl.textContent = "Total fees: " + money(totalOf(fees)) + " across " + fees.length + (fees.length === 1 ? " fee" : " fees");
+  }
+
+  function val(id, fallback) {
+    var v = document.getElementById(id).value.trim();
+    return v ? v : fallback;
+  }
+
+  function optinValue() {
+    var radios = document.getElementsByName("optin");
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].checked) { return radios[i].value; }
+    }
+    return "unsure";
+  }
+
+  function prettyDate(iso) {
+    if (!iso || iso === "[DATE]") { return "[DATE]"; }
+    var parts = iso.split("-");
+    if (parts.length !== 3) { return iso; }
+    var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    var m = parseInt(parts[1], 10);
+    var d = parseInt(parts[2], 10);
+    if (m >= 1 && m <= 12) { return months[m - 1] + " " + d + ", " + parts[0]; }
+    return iso;
+  }
+
+  function feeLines(fees) {
+    var lines = [];
+    for (var i = 0; i < fees.length; i++) {
+      lines.push("- " + prettyDate(fees[i].date) + ": " + money(fees[i].amount) + " fee, triggered by " + fees[i].trigger);
+    }
+    return lines.join("\n");
+  }
+
+  function optinSentence(optin, bank) {
+    if (optin === "no") {
+      return "I never agreed to overdraft coverage for debit card or ATM transactions. Under Regulation E, 12 CFR 1005.17, a bank may not charge overdraft fees on those transactions unless the customer has opted in. I did not opt in, so these fees should not have been charged at all.";
+    }
+    if (optin === "unsure") {
+      return "I do not remember ever agreeing to overdraft coverage for debit card or ATM transactions. Under Regulation E, 12 CFR 1005.17, a bank may not charge overdraft fees on those transactions unless the customer has opted in, and the bank must be able to show that the customer did. I am asking " + bank + " to produce the record of my opt in. If there is no such record, these fees were charged in violation of the rule and must be refunded.";
+    }
+    return "I understand I agreed to overdraft coverage at some point. I am still asking for these fees to be refunded, because of the way they were charged and the circumstances described below. I am also revoking my opt in to overdraft coverage for debit card and ATM transactions as of today, in writing, with this letter.";
+  }
+
+  function generate() {
+    var bank = val("bank-name", "[BANK NAME]");
+    var holder = val("holder-name", "[YOUR FULL NAME]");
+    var last4 = document.getElementById("acct-last4").value.trim();
+    var acctLine = last4 ? "account ending in " + last4 : "account number [ACCOUNT NUMBER]";
+    var address = val("holder-address", "[YOUR STREET ADDRESS]");
+    var city = val("holder-city", "[YOUR CITY, STATE, AND ZIP]");
+    var story = document.getElementById("story").value.trim() || "[DESCRIBE WHAT HAPPENED IN YOUR OWN WORDS]";
+    var fees = getFees();
+    var total = totalOf(fees);
+    var today = new Date();
+    var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    var todayStr = months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear();
+    var feeBlock = fees.length ? feeLines(fees) : "- [LIST EACH FEE: DATE, AMOUNT, AND WHAT TRIGGERED IT]";
+    var optin = optinValue();
+
+    var letterA =
+      todayStr + "\n\n" +
+      holder + "\n" + address + "\n" + city + "\n\n" +
+      bank + "\n[BRANCH OR BANK MAILING ADDRESS]\n\n" +
+      "Re: Error notice and refund request for overdraft fees on " + acctLine + "\n\n" +
+      "Dear " + bank + ":\n\n" +
+      "I am writing to give you formal notice of an error on my account and to ask for a refund of overdraft fees. Please treat this letter as an error notice under Regulation E, 12 CFR 1005.11, and investigate it the way the rule requires.\n\n" +
+      "The fees I am disputing are:\n" + feeBlock + "\n\n" +
+      "The total is " + money(total) + " across " + fees.length + (fees.length === 1 ? " fee" : " fees") + ".\n\n" +
+      "Here is what happened. " + story + "\n\n" +
+      optinSentence(optin, bank) + "\n\n" +
+      "I am asking you to do three things. First, refund all " + money(total) + " in fees listed above. Second, look into how these fees were charged and tell me in writing what you find. Third, confirm in writing that my account will not be charged overdraft fees on debit card or ATM transactions going forward unless I opt in again in writing.\n\n" +
+      "If any part of this request is denied, please tell me in writing which fees you are keeping and the exact reason for each one, including the rule or account term you are relying on.\n\n" +
+      "Thank you for your time. I would rather settle this with you directly, and I am filing copies of this letter with the Consumer Financial Protection Bureau and my state Attorney General so there is a full record.\n\n" +
+      "Sincerely,\n\n" + holder + "\n[PHONE NUMBER]\n[EMAIL ADDRESS]";
+
+    var complaintB =
+      "I am filing a complaint against " + bank + " about overdraft fees charged to my " + acctLine + ".\n\n" +
+      "The bank charged me " + money(total) + " in overdraft fees. The fees were:\n" + feeBlock + "\n\n" +
+      "What happened: " + story + "\n\n" +
+      optinSentence(optin, bank) + "\n\n" +
+      "I asked the bank to refund the fees. [DESCRIBE WHAT THE BANK SAID OR DID WHEN YOU ASKED, OR WRITE: THE BANK HAS NOT RESOLVED THIS YET.]\n\n" +
+      "What I am asking for: a full refund of " + money(total) + ", a written explanation of how the fees were charged, and confirmation that my account will not be charged overdraft fees on debit card or ATM transactions unless I opt in again in writing.\n\n" +
+      "My name is " + holder + ". My address is " + address + ", " + city + ".";
+
+    var complaintC =
+      "To the Consumer Protection Division, Office of the Attorney General of [STATE]:\n\n" +
+      "My name is " + holder + " and I live at " + address + ", " + city + ". I am writing to report unfair overdraft fee practices by " + bank + ", where I hold the " + acctLine + ".\n\n" +
+      "The bank charged me " + money(total) + " in overdraft fees. The fees were:\n" + feeBlock + "\n\n" +
+      "What happened: " + story + "\n\n" +
+      optinSentence(optin, bank) + "\n\n" +
+      "I believe these fees were unfair and deceptive, and that they may violate our state consumer protection law as well as federal Regulation E. I am asking your office to look into this bank and its overdraft practices. I understand your office may not take my case one by one. I am filing so my complaint becomes part of the public pattern record, and I am glad to share statements and documents if that helps an investigation.\n\n" +
+      "I have also complained to the bank directly and to the Consumer Financial Protection Bureau.\n\n" +
+      "Thank you for keeping records that protect people like me.\n\n" +
+      holder + "\n[PHONE NUMBER]\n[EMAIL ADDRESS]";
+
+    document.getElementById("out-a").textContent = letterA;
+    document.getElementById("out-b").textContent = complaintB;
+    document.getElementById("out-c").textContent = complaintC;
+    var out = document.getElementById("outputs");
+    out.hidden = false;
+    if (out.scrollIntoView) { out.scrollIntoView({ behavior: "smooth", block: "start" }); }
+  }
+
+  function copyText(id, noteId) {
+    var el = document.getElementById(id);
+    var note = document.getElementById(noteId);
+    function done() {
+      note.textContent = "Copied. Paste it where it needs to go.";
+      setTimeout(function () { note.textContent = ""; }, 4000);
+    }
+    function fallback() {
+      var range = document.createRange();
+      range.selectNodeContents(el);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      try { document.execCommand("copy"); done(); }
+      catch (e) { note.textContent = "Copy did not work here. Select the text and copy it by hand."; }
+      sel.removeAllRanges();
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(el.textContent).then(done, fallback);
+    } else {
+      fallback();
+    }
+  }
+
+  document.getElementById("add-fee-btn").addEventListener("click", function () { makeFeeRow(); });
+  document.getElementById("generate-btn").addEventListener("click", generate);
+
+  var copyBtns = document.querySelectorAll("[data-copy]");
+  for (var i = 0; i < copyBtns.length; i++) {
+    (function (btn) {
+      btn.addEventListener("click", function () {
+        copyText(btn.getAttribute("data-copy"), "copied-" + btn.getAttribute("data-copy").slice(-1));
+      });
+    })(copyBtns[i]);
+  }
+  var printBtns = document.querySelectorAll("[data-print]");
+  for (var j = 0; j < printBtns.length; j++) {
+    (function (btn) {
+      btn.addEventListener("click", function () {
+        document.body.className = btn.getAttribute("data-print");
+        window.print();
+        setTimeout(function () { document.body.className = ""; }, 500);
+      });
+    })(printBtns[j]);
+  }
+
+  makeFeeRow();
+  updateTotals();
+})();
+</script>
+</body>
+</html>
