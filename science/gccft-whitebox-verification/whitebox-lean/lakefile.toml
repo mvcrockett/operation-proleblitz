@@ -1,0 +1,6 @@
+name = "gccft-whitebox"
+version = "0.1.0"
+defaultTargets = ["GccftWhitebox"]
+
+[[lean_lib]]
+name = "GccftWhitebox"
